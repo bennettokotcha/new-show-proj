@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'show_details.css' %}">
+    <title>Show Details</title>
+</head>
+<a class='go_back' href="/shows">Go Back</a>
+<body>
+    <h1>TV SHOW {{create_show.id}}</h1>
+    <p class="detail_p">Tilte:  {{create_show.title}}</p>
+    <p class="detail_p">Network:  {{create_show.network}}</p>
+    <p class="detail_p">Release Date:  {{create_show.release_date}}</p>
+    <p class="detail_p">Descrpition:  {{create_show.desc}}</p>
+    <p id="bottom_p">Last Updated: {{create_show.updated_at}}</p>
+    <a id='edit_link' href="/shows/{{create_show.id}}/edit">Edit</a> <a href="/shows/{{create_show.id}}/destroy">Delete</a>
+</body>
+</html>

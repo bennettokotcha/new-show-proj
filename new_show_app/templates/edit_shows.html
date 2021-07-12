@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'add_show.css' %}">
+    <title>Edit Show</title>
+</head>
+<a class='go_back' href="/shows">Go Back</a>
+<body class="wrapper">
+    <h1>Edit Show {{edit_show.id}}</h1>
+    <form id='add_show_form' action="/shows/edit/{{edit_show.id}}" method="POST">
+        {% csrf_token %}
+        <label for="title">Title</label>
+        <input value="{{edit_show.title}}" type="text" name="title" id="form_title">
+        <br>
+        <label for="network">Network</label>
+        <input value="{{edit_show.network}}" type="text" name="network" id="">
+        <label for="release_date">Release Date</label>
+        <input value="{{edit_show.release_date}}" type="date" name="release_date" id="">
+        <br>
+        <label for="desc">Description</label>
+        <textarea value="{{edit_show.desc}}" name="desc" id="" cols="20" rows="5"></textarea>
+        <input class='button' type="submit" value="Update">
+        <p class="bottom_p">
+            <a href="/shows/{{edit_show.id}}">Go to Show</a>
+        </p>
+        {% if messages %}
+        <ul class='messages'>
+            {% for message in messages %}
+            <li class='errors' {% if message.tags %} class="{{message.tags}}"{% endif %}>{{message}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+</body>
+</html>

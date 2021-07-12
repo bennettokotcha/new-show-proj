@@ -1,0 +1,25 @@
+* {
+    margin: 0px auto;
+    padding: 0px;
+    /* outline: 1px dotted yellowgreen; */
+}
+.go_back {
+    margin-left: 1045px;
+}
+h1{
+    margin-top: 101px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.detail_p {
+    padding: 25px;
+}
+#bottom_p {
+    margin-top: 25px;
+    padding: 25px;
+}
+#edit_link {
+    border-right: 2px solid black;
+    margin-left: 25px;
+    padding-right: 5px;
+}

@@ -1,0 +1,43 @@
+* {
+    margin: 0px auto;
+    padding: 0px;
+    /* outline: 1px dotted yellowgreen; */
+}
+h1{
+    text-align: center;
+    margin-top: 101px;
+}
+.go_back {
+    margin-left: 1045px;
+}
+#add_show_form {
+    margin-top: -290px;
+    padding: 391px;
+}
+input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+textarea {
+    margin: 65px 0px 0px;
+    width: 379px;
+    height: 80px;
+}
+#form_title {
+    margin-left: 23px;
+}
+.button {
+    margin-left: 204px;
+    margin-top: 46px;
+    padding: 4px;
+    font-weight: bold;
+    font-size: larger;
+    border: 2px solid black;
+}
+.bottom_p {
+    text-align: center;
+    margin-right: 15px;
+}
+li.errors {
+    color: red;
+}
